@@ -10,7 +10,7 @@ export default function App() {
       <Navbar />
       <main className="container">
         <section className="hero">
-          <h1>Builder • Tinkerer • AI Curious</h1>
+          <h1>Spiritual innovator<br></br><em>Turning insight into action by the will of Allah</em></h1>
           <p>
             I make playful hardware + software: ESP32 sound-effect shoes, an AI assistant called
             <strong> Wizard</strong>, and lots of invention experiments.
