@@ -14,18 +14,8 @@ function StarScene() {
 export default function SpaceLab() {
   const [apod, setApod] = useState(null);
   const [error, setError] = useState("");
-
-  // keep helpers above the return
-  function say(text) {
-    if (!("speechSynthesis" in window)) {
-      alert("Speech synthesis isn’t supported in this browser.");
-      return;
-    }
-    const utter = new SpeechSynthesisUtterance(text);
-    // cancel any ongoing speech so clicks don’t overlap
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utter);
-  }
+function say(text){ window.speechSynthesis.speak(new SpeechSynthesisUtterance(text));}
+<button className="btn secondary" onClick={() => say("Zooming to Mars soon!")}>🔊 Speak</button>
 
   useEffect(() => {
     (async () => {
@@ -43,27 +33,10 @@ export default function SpaceLab() {
 
   return (
     <div className="section" id="space">
-      <h2 style={{ marginTop: 0 }}>Space Lab</h2>
-
-      {/* 🔊 The button must be INSIDE the JSX below */}
-      <button
-        type="button"
-        className="btn secondary"
-        onClick={() => say("Zooming to Mars soon!")}
-        style={{ marginBottom: 12 }}
-      >
-        🔊 Speak
-      </button>
+      <h2 style={{marginTop:0}}>Space Lab</h2>
 
       {/* 3D Starfield */}
-      <div
-        style={{
-          height: 320,
-          borderRadius: 12,
-          overflow: "hidden",
-          border: "1px solid rgba(255,255,255,.06)",
-        }}
-      >
+      <div style={{ height: 320, borderRadius: 12, overflow: "hidden", border: "1px solid rgba(255,255,255,.06)" }}>
         <Canvas camera={{ position: [0, 0, 3] }}>
           <StarScene />
         </Canvas>
@@ -74,32 +47,15 @@ export default function SpaceLab() {
         <div className="card">
           <div className="badge">NASA APOD</div>
           {error && <p style={{ color: "tomato" }}>{error}</p>}
-          {!apod && !error && (
-            <p style={{ color: "var(--muted)" }}>
-              Loading picture of the day…
-            </p>
-          )}
+          {!apod && !error && <p style={{ color: "var(--muted)" }}>Loading picture of the day…</p>}
           {apod && (
             <>
-              <h3 style={{ margin: "8px 0 6px" }}>{apod.title}</h3>
+              <h3 style={{margin:'8px 0 6px'}}>{apod.title}</h3>
               {apod.media_type === "image" && (
-                <img
-                  src={apod.url}
-                  alt={apod.title}
-                  style={{ width: "100%", borderRadius: 10 }}
-                />
+                <img src={apod.url} alt={apod.title} style={{ width: "100%", borderRadius: 10 }} />
               )}
-              <p style={{ color: "var(--muted)" }}>
-                {apod.explanation?.slice(0, 220)}…
-              </p>
-              <a
-                className="btn"
-                href={apod.hdurl || apod.url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open HD
-              </a>
+              <p style={{ color: "var(--muted)" }}>{apod.explanation?.slice(0, 220)}…</p>
+              <a className="btn" href={apod.hdurl || apod.url} target="_blank" rel="noreferrer">Open HD</a>
             </>
           )}
         </div>
