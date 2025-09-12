@@ -1,4 +1,5 @@
 import "./Style.css";
+import { Toaster, toast } from "react-hot-toast";
 import { motion } from "framer-motion";
 import Navbar from "./componets/Navbar.jsx";
 import ProjectCard from "./componets/ProjectCard.jsx";
@@ -10,6 +11,7 @@ export default function App() {
     <>
       <Navbar />
       <main className="container">
+        <Toaster position="top-right" />
         <section className="hero">
           <h1>Spiritual innovator<br></br><h4>(Noun):</h4><em>A person who focus on turning insight into action by the will of Allah</em></h1>
           <p>
@@ -18,7 +20,8 @@ export default function App() {
           </p>
           <div style={{display:'flex', gap:12, marginTop:16}}>
            <motion.a className="btn" href="#projects" whileTap={{ scale: 0.97 }} whileHover={{ scale: 1.03 }}>See Projects</motion.a>
-           <motion.a className="btn secondary" href="#inventions" whileTap={{ scale: 0.97 }} whileHover={{ scale: 1.03 }}>Invention List</motion.a>
+           <motion.a className="btn secondary" href="#inventions" onClick={(e) => { toast('Zooming to inventions 🚀'); }} whileTap={{ scale: 0.97 }} whileHover={{ scale: 1.03 }}>Invention List/motion.a>
+
           </div>
         </section>
 
