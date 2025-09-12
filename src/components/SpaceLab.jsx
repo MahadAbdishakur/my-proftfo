@@ -14,6 +14,7 @@ function StarScene() {
 export default function SpaceLab() {
   const [apod, setApod] = useState(null);
   const [error, setError] = useState("");
+<button className="btn secondary" onClick={() => say("Zooming to Mars soon!")}>🔊 Speak</button>
 
   useEffect(() => {
     (async () => {

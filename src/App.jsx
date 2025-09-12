@@ -1,13 +1,14 @@
 import "./Style.css";
 import { Toaster, toast } from "react-hot-toast";
 import { motion } from "framer-motion";
-import SpaceLab from "./componets/SpaceLab.jsx";
-import Navbar from "./componets/Navbar.jsx";
-import ProjectCard from "./componets/ProjectCard.jsx";
+import SpaceLab from "./components/SpaceLab.jsx";
+import Navbar from "./components/Navbar.jsx";
+import ProjectCard from "./components/ProjectCard.jsx";
 import { projects } from "./data/Projects.js";
 import { inventions } from "./data/Inventions.js";
 
 export default function App() {
+  function say(text){ window.speechSynthesis.speak(new SpeechSynthesisUtterance(text));}
   return (
     <>
       <Navbar />
@@ -22,6 +23,7 @@ export default function App() {
           <div style={{display:'flex', gap:12, marginTop:16}}>
            <motion.a className="btn" href="#projects" whileTap={{ scale: 0.97 }} whileHover={{ scale: 1.03 }}>See Projects</motion.a>
           <motion.a className="btn secondary" href="#inventions" onClick={(e) => { toast('Zooming to inventions 🚀'); }} whileTap={{ scale: 0.97 }} whileHover={{ scale: 1.03 }}>Invention List</motion.a>
+          
 
           </div>
         </section>
