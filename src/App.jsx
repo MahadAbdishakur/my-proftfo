@@ -1,7 +1,7 @@
 import "./Style.css";
 import { Toaster, toast } from "react-hot-toast";
 import { motion } from "framer-motion";
-import SpaceLab from "./components/SpaceLab.jsx";
+import SpaceLab from "./componets/SpaceLab.jsx";
 import Navbar from "./componets/Navbar.jsx";
 import ProjectCard from "./componets/ProjectCard.jsx";
 import { projects } from "./data/Projects.js";
