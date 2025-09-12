@@ -20,7 +20,7 @@ export default function App() {
           </p>
           <div style={{display:'flex', gap:12, marginTop:16}}>
            <motion.a className="btn" href="#projects" whileTap={{ scale: 0.97 }} whileHover={{ scale: 1.03 }}>See Projects</motion.a>
-           <motion.a className="btn secondary" href="#inventions" onClick={(e) => { toast('Zooming to inventions 🚀'); }} whileTap={{ scale: 0.97 }} whileHover={{ scale: 1.03 }}>Invention List/motion.a>
+          <motion.a className="btn secondary" href="#inventions" onClick={(e) => { toast('Zooming to inventions 🚀'); }} whileTap={{ scale: 0.97 }} whileHover={{ scale: 1.03 }}>Invention List</motion.a>
 
           </div>
         </section>
