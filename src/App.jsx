@@ -25,7 +25,7 @@ export default function App() {
 
           </div>
         </section>
-        <SpaceLab />
+        <section><SpaceLab /></section>
         <section id="projects" className="section">
           <h2 style={{marginTop:0}}>Projects</h2>
           <div className="grid">
