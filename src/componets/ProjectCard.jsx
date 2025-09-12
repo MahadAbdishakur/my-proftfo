@@ -1,6 +1,12 @@
+import { motion } from "framer-motion";
+
 export default function ProjectCard({ item }) {
   return (
-    <article className="card">
+    <motion.article
+      className="card"
+      whileHover={{ y: -4 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    >
       <div className="badge">{item.date}</div>
       <h3 style={{margin:'8px 0 6px'}}>{item.title}</h3>
       <p style={{color:'var(--muted)'}}>{item.description}</p>
@@ -14,6 +20,6 @@ export default function ProjectCard({ item }) {
           {item.links.writeup && <a className="btn secondary" href={item.links.writeup} target="_blank">Write-up</a>}
         </div>
       )}
-    </article>
+    </motion.article>
   );
 }

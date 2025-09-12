@@ -1,4 +1,5 @@
 import "./Style.css";
+import { motion } from "framer-motion";
 import Navbar from "./componets/Navbar.jsx";
 import ProjectCard from "./componets/ProjectCard.jsx";
 import { projects } from "./data/Projects.js";
@@ -10,14 +11,14 @@ export default function App() {
       <Navbar />
       <main className="container">
         <section className="hero">
-          <h1>Spiritual innovator<br></br><em>Turning insight into action by the will of Allah</em></h1>
+          <h1>Spiritual innovator<br></br><h2>(Noun  </h2><em>A person who focus on turning insight into action by the will of Allah</em></h1>
           <p>
             I make playful hardware + software: ESP32 sound-effect shoes, an AI assistant called
             <strong> Wizard</strong>, and lots of invention experiments.
           </p>
           <div style={{display:'flex', gap:12, marginTop:16}}>
-            <a className="btn" href="#projects">See Projects</a>
-            <a className="btn secondary" href="#inventions">Invention List</a>
+           <motion.a className="btn" href="#projects" whileTap={{ scale: 0.97 }} whileHover={{ scale: 1.03 }}>See Projects</motion.a>
+           <motion.a className="btn secondary" href="#inventions" whileTap={{ scale: 0.97 }} whileHover={{ scale: 1.03 }}>Invention List</motion.a>
           </div>
         </section>
 
