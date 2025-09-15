@@ -17,10 +17,9 @@ export default function App() {
         <section className="hero">
           <h1>Spiritual innovator<br></br></h1>
           <h4>(Noun):</h4>
-          <em><h3>A person who focus on turning insight into action by the will of Allah</h3></em>
+          <em><h3>An individual reliant on a higher power to fuel and produce works of art at his mercy</h3></em>
           <p>
-            I make playful hardware + software: ESP32 sound-effect shoes, an AI assistant called
-            <strong> Wizard</strong>, and lots of invention experiments.
+            <Em>Scroll to About section for more information</Em>
           </p>
           <div style={{display:'flex', gap:12, marginTop:16}}>
            <motion.a className="btn" href="#projects" whileTap={{ scale: 0.97 }} whileHover={{ scale: 1.03 }}>See Projects</motion.a>
@@ -49,8 +48,15 @@ export default function App() {
         <section id="about" className="section">
           <h2>About</h2>
           <p style={{color:'var(--muted)'}}>
-            I’m Mahad, exploring AI, AR/VR, electronics, and 3D printing. I like turning scrappy ideas into
-            working demos and sharing the process.
+            My name is Mahad Abdishakur. I'm a Muslim first, 
+            <b></b>
+            a man second, 
+            <b></b>
+            and a maker always. 
+            <b></b>
+            My curiosity ranges from space and AI to VR, electronics, and jewelry design. 
+            I like turning sketches and half-ideas into working prototypes and sharing the process so others can build too. 
+            This site is my hub: demos, write-ups, and experiments—all in one place.
           </p>
         </section>
 

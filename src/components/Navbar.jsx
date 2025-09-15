@@ -12,6 +12,10 @@ export default function Navbar() {
         <a href="#space">Space</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <a href="#vr/ar">VR/AR</a>
+        <a href="#donate">Donate</a>
+        <a href="#shop">Shop</a>
+        <a href="Blog">Blog</a>
         {/* optional external links */}
         <a href="https://github.com/yourhandle" target="_blank" rel="noreferrer"><FaGithub /></a>
         <a href="https://linkedin.com/in/your-handle" target="_blank" rel="noreferrer"><FaLinkedin /></a>
